@@ -14,15 +14,15 @@ public class PersonService {
         return personRepo.fetchAll();
     }
     public void addPerson(Person p){
-
+        personRepo.addPerson(p);
     }
     public Person findPersonById(int id){
-        return null;
+        return personRepo.findPersonById(id);
     }
     public Boolean deletePerson(int id){
-        return null;
+        return personRepo.deletePerson(id);
     }
     public void updatePerson(int id, Person p){
-
+        personRepo.updatePerson(id, p);
     }
 }

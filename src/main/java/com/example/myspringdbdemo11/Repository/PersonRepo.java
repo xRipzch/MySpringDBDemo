@@ -18,7 +18,8 @@ public class PersonRepo {
         return template.query(sql, rowMapper);
     }
     public void addPerson(Person p){
-
+        String sql = "INSERT INTO person (id, first_name, last_name) VALUES (?, ?, ?)";
+        template.update(sql, p.getId(), p.getFirst_name(), p.getLast_name());
     }
     public Person findPersonById(int id){
         return null;
